@@ -30,21 +30,21 @@
           <h2 id="gallery-title">The useful bits</h2>
           <p>One focused gallery: type, controls, status, palette, and fictional telemetry. Replace the content, not the personality.</p>
         </div>
-        <nav class="ud-range" aria-label="Example time range">
-          <a href="?range=1d" aria-current="page">1D</a>
-          <a href="?range=7d">7D</a>
-          <a href="?range=30d">30D</a>
+        <nav class="ud-range" aria-label="Gallery sections">
+          <a href="#foundation">Foundation</a>
+          <a href="#components">Components</a>
+          <a href="#data">Data</a>
         </nav>
       </div>
 
       <div class="ud-grid">
-        <article class="ud-panel ud-grid__wide ud-panel--tilt-left">
+        <article id="foundation" class="ud-panel ud-grid__wide ud-panel--tilt-left">
           <h3>Display type / RGB split</h3>
           <p class="ud-display">Loud type, quiet data.</p>
           <p class="ud-copy">The headline stays one ordinary, accessible text string. Its magenta and cyan ghosts are only paint.</p>
         </article>
 
-        <article class="ud-panel ud-grid__narrow ud-panel--tilt-right">
+        <article id="components" class="ud-panel ud-grid__narrow ud-panel--tilt-right">
           <h3>Controls / real HTML</h3>
           <div class="ud-input-group">
             <label for="signal-name">Signal name</label>
@@ -52,8 +52,9 @@
             <p class="ud-help">A labelled input with a visible focus bloom.</p>
           </div>
           <p>
-            <label class="ud-check"><input type="checkbox" checked> Keep the glow on</label>
+            <label class="ud-check"><input type="checkbox" checked> Example checkbox</label>
           </p>
+          <p class="ud-help">This demonstrates checked and unchecked states only; it is not a global glow setting.</p>
           <button id="copy-example" class="ud-button" type="button">Copy starter markup</button>
           <p id="copy-message" class="ud-demo-message" role="status" aria-live="polite"></p>
         </article>
@@ -79,7 +80,7 @@
           </div>
         </article>
 
-        <article class="ud-panel ud-grid__full" aria-labelledby="metrics-title">
+        <article id="data" class="ud-panel ud-grid__full" aria-labelledby="metrics-title">
           <h3 id="metrics-title">Data display / fictional pulse</h3>
           <div class="ud-metrics">
             <div class="ud-metric"><span>Open signals</span><strong>2,480</strong></div>
@@ -106,7 +107,8 @@
             <li><span class="ud-dot" style="--dot:var(--viz-cat-1)"></span><span>Teal</span><strong>36%</strong></li>
             <li><span class="ud-dot" style="--dot:var(--viz-cat-2)"></span><span>Violet</span><strong>26%</strong></li>
             <li><span class="ud-dot" style="--dot:var(--viz-cat-3)"></span><span>Orange</span><strong>17%</strong></li>
-            <li><span class="ud-dot" style="--dot:var(--viz-neutral)"></span><span>Other</span><small>9%</small></li>
+            <li><span class="ud-dot" style="--dot:var(--viz-cat-4)"></span><span>Magenta</span><strong>12%</strong></li>
+            <li><span class="ud-dot" style="--dot:var(--viz-neutral)"></span><span class="ud-legend__other">Other</span><small>9%</small></li>
           </ul>
         </article>
 
@@ -115,9 +117,9 @@
           <div class="ud-table-wrap" tabindex="0" aria-label="Horizontally scrollable recent signals">
             <div class="ud-table" role="table" aria-label="Recent fictional signals table">
               <div class="ud-table__heading" role="row"><span role="columnheader">When</span><span role="columnheader">Name</span><span role="columnheader">State</span><span role="columnheader">Pulse</span><span role="columnheader">Context</span></div>
-              <div class="ud-table__row" role="row"><time datetime="2026-01-01T08:42:00Z">08:42 UTC</time><code role="cell">afterglow-7</code><span role="cell" class="ud-status ud-status--ready">Ready</span><span role="cell">112 ms</span><small role="cell">Routine sample, all clear</small></div>
-              <div class="ud-table__row" role="row"><time datetime="2026-01-01T08:39:00Z">08:39 UTC</time><code role="cell">night-shift-2</code><span role="cell" class="ud-status ud-status--warning">Review</span><span role="cell">241 ms</span><small role="cell">A little dramatic, not broken</small></div>
-              <div class="ud-table__row" role="row"><time datetime="2026-01-01T08:34:00Z">08:34 UTC</time><code role="cell">soft-launch-4</code><span role="cell" class="ud-status ud-status--error">Blocked</span><span role="cell">—</span><small role="cell">Example input was withheld</small></div>
+              <div class="ud-table__row" role="row"><time role="cell" datetime="2026-01-01T08:42:00Z">08:42 UTC</time><code role="cell">afterglow-7</code><span role="cell" class="ud-status ud-status--ready">Ready</span><span role="cell">112 ms</span><small role="cell">Routine sample, all clear</small></div>
+              <div class="ud-table__row" role="row"><time role="cell" datetime="2026-01-01T08:39:00Z">08:39 UTC</time><code role="cell">night-shift-2</code><span role="cell" class="ud-status ud-status--warning">Review</span><span role="cell">241 ms</span><small role="cell">A little dramatic, not broken</small></div>
+              <div class="ud-table__row" role="row"><time role="cell" datetime="2026-01-01T08:34:00Z">08:34 UTC</time><code role="cell">soft-launch-4</code><span role="cell" class="ud-status ud-status--error">Blocked</span><span role="cell">—</span><small role="cell">Example input was withheld</small></div>
             </div>
           </div>
         </article>

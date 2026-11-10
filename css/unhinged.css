@@ -209,13 +209,14 @@ body::after {
 .ud-bar-row--other .ud-bar-name { color: var(--muted); font-style: italic; }
 .ud-bar-row--other .ud-bar-track::before { background: var(--viz-neutral); }
 
-.ud-donut { display: grid; place-items: center; min-height: 12rem; border-radius: 50%; background: conic-gradient(var(--viz-cat-1) 0 36%, var(--viz-cat-2) 36% 62%, var(--viz-cat-3) 62% 79%, var(--viz-cat-4) 79% 91%, var(--viz-neutral) 91% 100%); box-shadow: 0 0 32px rgba(0, 245, 255, 0.16); }
+.ud-donut { display: grid; place-items: center; width: min(100%, 18rem); aspect-ratio: 1; margin-inline: auto; border-radius: 50%; background: conic-gradient(var(--viz-cat-1) 0 36%, var(--viz-cat-2) 36% 62%, var(--viz-cat-3) 62% 79%, var(--viz-cat-4) 79% 91%, var(--viz-neutral) 91% 100%); box-shadow: 0 0 32px rgba(0, 245, 255, 0.16); }
 .ud-donut::after { content: "MIX"; display: grid; place-items: center; width: 55%; height: 55%; border-radius: 50%; background: var(--viz-surface); color: var(--muted); font-size: 0.75rem; font-weight: 900; letter-spacing: 0.14em; }
 .ud-legend { display: grid; gap: 0.5rem; margin: 1rem 0 0; padding: 0; list-style: none; }
 .ud-legend li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0.6rem; align-items: center; }
 .ud-dot { width: 0.7rem; height: 0.7rem; border-radius: 999px; background: var(--dot, var(--viz-neutral)); box-shadow: 0 0 12px var(--dot, var(--viz-neutral)); }
 .ud-legend strong { color: var(--acid); }
 .ud-legend small { color: var(--muted); }
+.ud-legend__other { color: var(--muted); font-style: italic; }
 
 .ud-table-wrap { overflow-x: auto; scrollbar-color: rgba(0, 245, 255, 0.35) transparent; }
 .ud-table { display: grid; gap: 0.45rem; min-width: 720px; }
@@ -242,7 +243,7 @@ body::after {
   .ud-shell { width: min(100% - 1rem, 1240px); padding-top: 0.5rem; }
   .ud-card--hero { min-height: 23rem; padding: 1.2rem; }
   .ud-palette { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ud-bar-row { grid-template-columns: minmax(6rem, 0.8fr) minmax(7rem, 1.2fr) 2.6rem; }
+  .ud-bar-row { grid-template-columns: minmax(5rem, 0.8fr) minmax(4rem, 1.2fr) 2.6rem; }
   .ud-bar-share { display: none; }
   .ud-table__heading, .ud-table__row { font-size: 0.78rem; }
 }
