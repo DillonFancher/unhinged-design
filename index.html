@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A zero-dependency copy and paste design kit by Dillon Fancher.">
+  <title>Unhinged Design — portable visual kit</title>
+  <link rel="stylesheet" href="css/unhinged.css">
+</head>
+<body>
+  <main class="ud-shell">
+    <section class="ud-card ud-card--hero" aria-labelledby="hero-title">
+      <div>
+        <p class="ud-label">Dillon Fancher / portable visual kit</p>
+        <h1 id="hero-title" class="ud-heading">Make the interface misbehave beautifully.</h1>
+        <p class="ud-copy">Neon-brutalist glassmorphism on a void. Copy the CSS, keep the semantics, and let the pixels get loud without making the information harder to read.</p>
+      </div>
+      <div>
+        <p class="ud-kicker">Zero dependencies. No build step. No mysterious cloud ritual.</p>
+        <p>
+          <a class="ud-button" href="#gallery">Enter the gallery</a>
+          <a class="ud-button ud-button--quiet" href="docs/design-system.md">Read the recipe</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery" class="ud-card ud-section" aria-labelledby="gallery-title">
+      <div class="ud-section__header">
+        <div>
+          <h2 id="gallery-title">The useful bits</h2>
+          <p>One focused gallery: type, controls, status, palette, and fictional telemetry. Replace the content, not the personality.</p>
+        </div>
+        <nav class="ud-range" aria-label="Gallery sections">
+          <a href="#foundation">Foundation</a>
+          <a href="#components">Components</a>
+          <a href="#data">Data</a>
+        </nav>
+      </div>
+
+      <div class="ud-grid">
+        <article id="foundation" class="ud-panel ud-grid__wide ud-panel--tilt-left">
+          <h3>Display type / RGB split</h3>
+          <p class="ud-display">Loud type, quiet data.</p>
+          <p class="ud-copy">The headline stays one ordinary, accessible text string. Its magenta and cyan ghosts are only paint.</p>
+        </article>
+
+        <article id="components" class="ud-panel ud-grid__narrow ud-panel--tilt-right">
+          <h3>Controls / real HTML</h3>
+          <div class="ud-input-group">
+            <label for="signal-name">Signal name</label>
+            <input id="signal-name" class="ud-input" type="text" placeholder="e.g. midnight snack">
+            <p class="ud-help">A labelled input with a visible focus bloom.</p>
+          </div>
+          <p>
+            <label class="ud-check"><input type="checkbox" checked> Example checkbox</label>
+          </p>
+          <p class="ud-help">This demonstrates checked and unchecked states only; it is not a global glow setting.</p>
+          <button id="copy-example" class="ud-button" type="button">Copy starter markup</button>
+          <p id="copy-message" class="ud-demo-message" role="status" aria-live="polite"></p>
+        </article>
+
+        <article class="ud-panel ud-grid__full">
+          <h3>Status is more than a color</h3>
+          <div class="ud-status-list" aria-label="Example statuses">
+            <span class="ud-status ud-status--ready">Ready / synced</span>
+            <span class="ud-status ud-status--warning">Needs review / named</span>
+            <span class="ud-status ud-status--error">Blocked / missing input</span>
+          </div>
+          <p class="ud-focus-note">Every status includes words and a glyph. The glow is decoration, not the only signal.</p>
+        </article>
+
+        <article class="ud-panel ud-grid__full">
+          <h3>Palette / UI neons versus data categoricals</h3>
+          <div class="ud-palette" aria-label="Palette swatches">
+            <div class="ud-swatch"><span class="ud-swatch__color" style="--swatch:var(--acid)"></span><span class="ud-swatch__name">acid / #d7ff2f</span></div>
+            <div class="ud-swatch"><span class="ud-swatch__color" style="--swatch:var(--hot)"></span><span class="ud-swatch__name">hot / #ff2bd6</span></div>
+            <div class="ud-swatch"><span class="ud-swatch__color" style="--swatch:var(--cyan)"></span><span class="ud-swatch__name">cyan / #00f5ff</span></div>
+            <div class="ud-swatch"><span class="ud-swatch__color" style="--swatch:var(--viz-cat-1)"></span><span class="ud-swatch__name">viz teal / #00a9b0</span></div>
+            <div class="ud-swatch"><span class="ud-swatch__color" style="--swatch:var(--viz-cat-5)"></span><span class="ud-swatch__name">viz olive / #87a300</span></div>
+          </div>
+        </article>
+
+        <article id="data" class="ud-panel ud-grid__full" aria-labelledby="metrics-title">
+          <h3 id="metrics-title">Data display / fictional pulse</h3>
+          <div class="ud-metrics">
+            <div class="ud-metric"><span>Open signals</span><strong>2,480</strong></div>
+            <div class="ud-metric"><span>Stable rate</span><strong>98.4%</strong></div>
+            <div class="ud-metric"><span>Needs review</span><strong>17</strong></div>
+            <div class="ud-metric"><span>p95 pulse</span><strong>184 ms</strong></div>
+          </div>
+        </article>
+
+        <article class="ud-panel ud-grid__wide">
+          <h3>Top signal families</h3>
+          <div class="ud-bars" aria-label="Fictional signal family counts">
+            <div class="ud-bar-row"><span class="ud-bar-name">Afterglow</span><span class="ud-bar-track" style="--w:78%" aria-hidden="true"></span><strong class="ud-bar-count">864</strong><span class="ud-bar-share">35%</span></div>
+            <div class="ud-bar-row"><span class="ud-bar-name">Night shift</span><span class="ud-bar-track" style="--w:62%" aria-hidden="true"></span><strong class="ud-bar-count">692</strong><span class="ud-bar-share">28%</span></div>
+            <div class="ud-bar-row"><span class="ud-bar-name">Soft launch</span><span class="ud-bar-track" style="--w:41%" aria-hidden="true"></span><strong class="ud-bar-count">462</strong><span class="ud-bar-share">19%</span></div>
+            <div class="ud-bar-row ud-bar-row--other"><span class="ud-bar-name">Other</span><span class="ud-bar-track" style="--w:18%" aria-hidden="true"></span><strong class="ud-bar-count">198</strong><span class="ud-bar-share">8%</span></div>
+          </div>
+        </article>
+
+        <article class="ud-panel ud-grid__narrow">
+          <h3>Source mix</h3>
+          <div class="ud-donut" role="img" aria-label="Fictional source mix: 36 percent teal, 26 percent violet, 17 percent orange, 12 percent magenta, 9 percent other"></div>
+          <ul class="ud-legend">
+            <li><span class="ud-dot" style="--dot:var(--viz-cat-1)"></span><span>Teal</span><strong>36%</strong></li>
+            <li><span class="ud-dot" style="--dot:var(--viz-cat-2)"></span><span>Violet</span><strong>26%</strong></li>
+            <li><span class="ud-dot" style="--dot:var(--viz-cat-3)"></span><span>Orange</span><strong>17%</strong></li>
+            <li><span class="ud-dot" style="--dot:var(--viz-cat-4)"></span><span>Magenta</span><strong>12%</strong></li>
+            <li><span class="ud-dot" style="--dot:var(--viz-neutral)"></span><span class="ud-legend__other">Other</span><small>9%</small></li>
+          </ul>
+        </article>
+
+        <article class="ud-panel ud-grid__full">
+          <h3>Recent fictional signals</h3>
+          <div class="ud-table-wrap" tabindex="0" aria-label="Horizontally scrollable recent signals">
+            <div class="ud-table" role="table" aria-label="Recent fictional signals table">
+              <div class="ud-table__heading" role="row"><span role="columnheader">When</span><span role="columnheader">Name</span><span role="columnheader">State</span><span role="columnheader">Pulse</span><span role="columnheader">Context</span></div>
+              <div class="ud-table__row" role="row"><time role="cell" datetime="2026-01-01T08:42:00Z">08:42 UTC</time><code role="cell">afterglow-7</code><span role="cell" class="ud-status ud-status--ready">Ready</span><span role="cell">112 ms</span><small role="cell">Routine sample, all clear</small></div>
+              <div class="ud-table__row" role="row"><time role="cell" datetime="2026-01-01T08:39:00Z">08:39 UTC</time><code role="cell">night-shift-2</code><span role="cell" class="ud-status ud-status--warning">Review</span><span role="cell">241 ms</span><small role="cell">A little dramatic, not broken</small></div>
+              <div class="ud-table__row" role="row"><time role="cell" datetime="2026-01-01T08:34:00Z">08:34 UTC</time><code role="cell">soft-launch-4</code><span role="cell" class="ud-status ud-status--error">Blocked</span><span role="cell">—</span><small role="cell">Example input was withheld</small></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="ud-section" aria-label="Project footer">
+      <p class="ud-copy">Built by Dillon Fancher as a visual starting point, not a permission slip. See the README for boundaries, copying instructions, and the deliberately undecided license.</p>
+    </footer>
+  </main>
+  <script src="js/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+name: Static source check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  source-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Validate local HTML, CSS, and links
+        run: python3 scripts/check-static.py
+      - name: Parse optional demo JavaScript
+        run: node --check js/demo.js
